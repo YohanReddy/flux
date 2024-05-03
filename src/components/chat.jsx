@@ -40,8 +40,8 @@ const Chat = () => {
   const socket = useRef(null);
 
   useEffect(() => {
-    // socket.current = io('https://server-realtime-chat-phqj.onrender.com');
-    socket.current = io('localhost:4000');
+    socket.current = io('https://server-realtime-chat-phqj.onrender.com');
+    // socket.current = io('localhost:4000');
 
     socket.current.on('chat message', (data) => {
       setMessages(prevMessages => [...prevMessages, data]);
